@@ -18,6 +18,11 @@
 body{
   font-family: "Inter", sans-serif;
 }
+body > nav,
+body > section:not(#footer) {
+    width: 1440px;
+    margin: 0 auto;
+}
 
 nav{
     position: fixed;
@@ -27,7 +32,9 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1vw 8vw;
+    padding: 1vw 0;
+    left: 0;
+    right: 0;
     
 }
 
@@ -154,6 +161,7 @@ nav .navigation ul li a.btn-dark{
 }
 
 
+
 #clients h1{
     padding-top: 50px;
     font-size: 36px;
@@ -178,7 +186,7 @@ nav .navigation ul li a.btn-dark{
     height: 98px;
     justify-content: space-between;
     display: flex;
-    margin-right: 50px;
+    margin-right: 40px;
     align-items: center;
 }
 
@@ -197,13 +205,13 @@ nav .navigation ul li a.btn-dark{
 }
 
 #clients .cli-logos .logos img{
-    margin-left: 150px;
+    margin-left: 100px;
     align-items: center;
     
 }
 
 #community{
-    padding: 4vw 8vw 0 8vw;
+    padding: 4vw 8vw 0 4vw;
     
 }
 
@@ -230,9 +238,10 @@ nav .navigation ul li a.btn-dark{
     padding-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 128px;
+    grid-gap: 10px;
     margin-top: 26px;
     margin-left: 120px;
+    margin-bottom: 50px;
     
 }
 
@@ -252,7 +261,7 @@ nav .navigation ul li a.btn-dark{
     align-items: center;
     grid-template-columns: 1fr 1fr;
     column-gap: 2px;
-    padding: 1vw 8vw 1vw 8vw;
+    padding: 1vw 8vw 1vw 4vw;
 }
 
 
@@ -322,6 +331,7 @@ nav .navigation ul li a.btn-dark{
     width: 100%;
     height: 288px;
     display: flex;
+    gap: 200px;
     padding: 64px 144px 64px 144px;
     background-color: #F5F7FA;
     
@@ -359,13 +369,19 @@ nav .navigation ul li a.btn-dark{
 
 #achievements .ac-right{
     display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 2px;
-    padding-left: 250px;
-    justify-content: center;
-
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    
 }
+
+#achievements .ac-right .container{
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+    gap: 16px;
+}
+
 
 #achievements .ac-right .ac-info h1{
     color: #4D4D4D;
@@ -470,7 +486,7 @@ nav .navigation ul li a.btn-dark{
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 2px;
-    padding: 1vw 8vw 1vw 8vw;
+    padding: 1vw 8vw 1vw 4vw;
     background-color: #F5F7FA;
 }
 
@@ -509,11 +525,14 @@ nav .navigation ul li a.btn-dark{
     color: var(--primary-color);
     text-decoration: none;
     align-items: right;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600px;
     
 }
 
 #customer aside{
-    width: 50%;
+    width: 40%;
     margin: 16px;
     align-items: center;
     
@@ -521,7 +540,7 @@ nav .navigation ul li a.btn-dark{
 }
 
 #customer main{
-    width: 50%;
+   width: 60%;
     margin-top: 50px;
     margin-left: 20px;
     align-items: center;
@@ -546,12 +565,8 @@ nav .navigation ul li a.btn-dark{
     height: 48px;
     border-radius: 8px;
     display: flex;
-    
-    justify-content: space-between;
     gap:40px;
-    
-    
-    
+
 }
 
 #customers .cli-logos .logos img{
@@ -569,17 +584,18 @@ nav .navigation ul li a.btn-dark{
 
 
 #community-up{
-    padding: 4vw 8vw 0 8vw;
+    padding: 4vw 8vw 4vw 4vw;
     
 }
 
 #community-up h1{
-    padding-top: 20px;
+    padding-top:20px;
     font-size: 36px;
     line-height: 44px;
     font-weight: 600;
     color: #4D4D4D;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 #community-up h2{
@@ -589,6 +605,7 @@ nav .navigation ul li a.btn-dark{
     font-weight: 600;
     color: #717171;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 #community-up p{
@@ -607,10 +624,11 @@ nav .navigation ul li a.btn-dark{
     padding-top: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 100px;
+    grid-gap: 10px;
     margin-top: 26px;
     margin-left: 30px;
     padding-left: 30px;
+    margin-bottom: 50px;
     
 }
 
@@ -623,10 +641,27 @@ nav .navigation ul li a.btn-dark{
     height: 285px;
     border-radius: 8px;
     text-align: center;
+    position: relative;
+    margin-bottom: 50px;
     
     
 }
 
+
+#community-up .comup-base .comup-box .box{
+    background-color: #F5F7FA;
+    margin-left: 80px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -150px;
+    border-radius: 10px;
+    gap: 16px;
+    padding: 16px;
+    
+    
+}
 
 #community-up .comup-base .comup-box a.btn-green{
     width: 151px;
@@ -637,22 +672,17 @@ nav .navigation ul li a.btn-dark{
     color: var(--primary-color);
     text-decoration: none;
     align-items: right;
-    padding-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
     
 }
 
-#community-up .comup-base .comup-box .box{
-    background-color: #F5F7FA;
-    margin-left: 80px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    
-}
+
 
 
 #footer{
-    padding: 8vw 8vw 0 8vw;
+    padding: 0px;
+    padding-top: 10px;
     align-items: center;
     background-color: #F5F7FA;
 
@@ -675,7 +705,7 @@ nav .navigation ul li a.btn-dark{
     flex-wrap: wrap;
     width: 100%;
     padding: 6vw 8vw 4vw 8vw ;
-
+    
 }
 
 #footer h1{
@@ -685,6 +715,7 @@ nav .navigation ul li a.btn-dark{
     font-weight: 600;
     color: #263238;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 #footer a.btn-green{
@@ -699,9 +730,10 @@ nav .navigation ul li a.btn-dark{
     align-items: center;
     justify-content: center;
     text-align: center;
-    left: 700px;
+    left: 850px;
     position: relative;
     top: 50px;
+    padding-bottom: 20px;
    
     
 }
